@@ -1,0 +1,26 @@
+{
+  "agent_name": "Image Generation Agent",
+  "agent_id": "69972037953ca8351f0efd92",
+  "description": "Interprets user text prompts combined with selected artistic style, crafts optimized image generation instructions, and produces AI-generated images. Handles prompt refinement and regeneration requests.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "prompt_used": "string",
+    "style_applied": "string",
+    "description": "string"
+  },
+  "example_response": {
+    "prompt_used": "The optimized prompt used for image generation",
+    "style_applied": "The artistic style that was applied",
+    "description": "A brief description of the generated image"
+  },
+  "has_module_outputs": true,
+  "module_outputs_example": {
+    "artifact_files": [
+      {
+        "file_url": "https://example.com/image.png"
+      }
+    ]
+  }
+}

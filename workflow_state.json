@@ -1,0 +1,13 @@
+{
+  "agents": {
+    "image_generation_agent": {
+      "agent_id": "69972037953ca8351f0efd92",
+      "name": "Image Generation Agent",
+      "type": "single",
+      "has_image_output": true,
+      "has_voice": false,
+      "has_file_output": false,
+      "has_schedule": false
+    }
+  }
+}
