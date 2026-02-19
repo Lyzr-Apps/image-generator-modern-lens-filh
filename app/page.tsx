@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { callAIAgent } from '@/lib/aiAgent'
-import { LuSparkles, LuDownload, LuRefreshCw, LuPenLine, LuBookmark, LuImage, LuPalette, LuTrash2, LuX, LuChevronLeft, LuChevronRight, LuZoomIn, LuFilter, LuLayoutGrid, LuSearch, LuMenu, LuInfo, LuLoader2, LuAlertCircle, LuCheck, LuExternalLink } from 'react-icons/lu'
+import { LuSparkles, LuDownload, LuRefreshCw, LuPenLine, LuBookmark, LuImage, LuPalette, LuTrash2, LuX, LuChevronLeft, LuChevronRight, LuZoomIn, LuFilter, LuLayoutGrid, LuSearch, LuMenu, LuInfo, LuLoader, LuCircleAlert, LuCheck, LuExternalLink } from 'react-icons/lu'
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 
@@ -257,7 +257,7 @@ function ShimmerSkeleton() {
     <div className="w-full aspect-square rounded-2xl bg-muted overflow-hidden relative">
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse" />
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
-        <LuLoader2 className="w-10 h-10 text-accent animate-spin" />
+        <LuLoader className="w-10 h-10 text-accent animate-spin" />
         <p className="text-muted-foreground text-sm font-medium">Generating your masterpiece...</p>
       </div>
     </div>
@@ -858,7 +858,7 @@ export default function Page() {
               >
                 {isGenerating ? (
                   <>
-                    <LuLoader2 className="w-5 h-5 animate-spin" />
+                    <LuLoader className="w-5 h-5 animate-spin" />
                     Generating...
                   </>
                 ) : (
@@ -872,7 +872,7 @@ export default function Page() {
               {/* Error Message */}
               {errorMessage && (
                 <div className="flex items-start gap-3 px-5 py-4 rounded-2xl bg-destructive/10 border-2 border-red-900/30">
-                  <LuAlertCircle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
+                  <LuCircleAlert className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
                   <div className="flex-1">
                     <p className="text-sm text-red-400 font-medium">{errorMessage}</p>
                     <button
